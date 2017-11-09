@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>Junior Front-End Developer Test - Yoav Millet</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	
+	<body>
+		<div id="loader"></div>
+		
+		<div id="wrapper">
+			<div id="container">
+				<div id="headerDiv">
+					<div id="header">
+						<img id="logo" src="mail.png"/>
+						<div id="headerText">
+							<p id="welcome">Welcome to</p>
+							<p class="boldText">Mail App</p>
+						</div>
+					</div>
+				</div>
+				
+				<form id="form" class="col-3" action="welcome.php" method="post">
+					<div class="input">
+						<input type="text" name="name" placeholder="Enter your name" maxlength="24">
+						<img src="user.png"/>
+					</div>
+					<div class="input">
+						<input type="password" name="password" placeholder="Password" maxlength="16">
+						<img src="password.png"/>
+					</div>
+					<div id="submit">
+						<input type="button" onclick="showSpinner()" value="Login">
+					</div>
+					<a id="lostPassword" href="#">Lost your password?</a>
+				</form>
+				
+			</div>
+		</div>
+	</body>
+	
+	<script type="text/javascript">
+	var myVar;
+
+	function showSpinner() {
+		document.getElementById("loader").style.display = "block";
+		myVar = setTimeout(submitForm, 2000); // Time-out is just to show the spinner
+	}
+	
+	function submitForm() {
+        document.getElementById("form").submit();
+    }
+	</script>
+	
+</html>
